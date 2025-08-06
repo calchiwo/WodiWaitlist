@@ -1,2 +1,2 @@
 # WodiWaitlist
-My personal wait-list tool for [**collecting email sign-ups**](wodiwaitlist.netlify.app) for **upcoming projects and launches**. Built with **simplicity and efficiency** in mind, this repo helps me gauge interest and build **anticipation** for **my future endeavors**.
+My personal wait-list tool for [**collecting email sign-ups**](https://wodiwaitlist.netlify.app/) for **upcoming projects and launches**. Built with **simplicity and efficiency** in mind, this repo helps me gauge interest and build **anticipation** for **my future endeavors**.
