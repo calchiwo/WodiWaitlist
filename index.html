@@ -268,7 +268,7 @@
         </h1>
 
         <p class="subtext">
-          Be among the first to know when we launch. Join the waitlist.
+          Be among the first to know when I launch. Join the waitlist.
         </p>
 
         <form name="wodiwaitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="waitlist-form" id="waitlist-form">
@@ -327,13 +327,13 @@
 
             if (response.ok) {
               form.style.display = "none";
-              message.textContent = "🎉 Thanks for subscribing! to my waitlist, i'll update you when i launch any of my projects";
+              message.textContent = "🎉 Thanks for subscribing to my waitlist!, I'll update you when I launch any of my projects";
               message.style.color = "#1e40af";
             } else {
               throw new Error("Network response was not ok.");
             }
           } catch (error) {
-            message.textContent = "❌ Something went wrong. Try again later.";
+            message.textContent = "❌ Something went wrong. Please try again later.";
             message.style.color = "#dc2626";
           }
         });
