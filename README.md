@@ -1,1 +1,1 @@
-**My personal wait-list platform** for [**collecting early interest and sign-ups**](https://wodiwaitlist.netlify.app/) for **my upcoming launches**. Built with **simplicity and efficiency** in mind, this repo helps me gauge interest and build **anticipation** for **my future endeavors**.
+**My personal wait-list platform** for [**collecting early interest and sign-ups**](https://wodiwaitlist.netlify.app/) for **my upcoming launches**.
