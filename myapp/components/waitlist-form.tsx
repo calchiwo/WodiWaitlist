@@ -55,7 +55,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             <div className="relative">
               <Input
                 type="email"
-                placeholder="your.email@example.com"
+                placeholder="yourname@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
