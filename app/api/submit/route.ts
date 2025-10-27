@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
-import { db } from "@/lib/firebase"
+import { db } from "@/lib/firebaseClient"
+import { collection, addDoc } from "firebase/firestore"
 
 interface Submission {
   email: string
@@ -25,8 +26,8 @@ export async function POST(request: Request) {
       timestamp: new Date().toISOString(),
     }
 
-    // Add submission to Firestore
-    await db.collection("emails").add(submission)
+    // Add submission to Firestore (Client SDK)
+    await addDoc(collection(db, "emails"), submission)
 
     return NextResponse.json(
       {
