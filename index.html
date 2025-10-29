@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Caleb 'Calchiwo' Wodi's waitlist to stay updated on upcoming projects and launches.">
+  <title>WodiWaitlist - Join My Journey</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@400;600;700&family=Geist+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background font-sans text-foreground overflow-x-hidden">
+
+  <!-- Background Orbs -->
+  <div class="absolute top-0 left-0 w-72 h-72 bg-primary opacity-30 rounded-full animate-float"></div>
+  <div class="absolute bottom-0 right-0 w-72 h-72 bg-secondary opacity-30 rounded-full animate-float animation-delay-1s"></div>
+
+  <div class="min-h-screen flex flex-col justify-center items-center px-4">
+    <!-- Logo -->
+    <img src="public/wodiwaitlist-logo.jpg" alt="WodiWaitlist Logo" class="max-w-xs md:max-w-sm mb-6 animate-fade-in">
+
+    <!-- Heading -->
+    <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text mb-2 animate-fade-in animate-delay-200">
+      Join My Waitlist
+    </h1>
+    <p class="text-lg md:text-xl mb-6 animate-fade-in animate-delay-300">I can't wait to share my projects with you!</p>
+
+    <!-- Netlify Form -->
+    <form id="waitlist-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          class="w-full max-w-md bg-white/70 backdrop-blur-lg p-6 rounded-xl shadow-lg animate-scale-in">
+      <!-- Hidden input for Netlify bot protection -->
+      <input type="hidden" name="form-name" value="waitlist">
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+      </p>
+
+      <div class="flex flex-col space-y-4">
+        <input type="email" name="email" id="email" placeholder="Enter your email" required
+               class="h-16 px-4 text-lg rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+        <button type="submit"
+                class="h-16 text-lg font-semibold bg-gradient-to-r from-primary to-secondary text-white rounded-md hover:scale-[1.02] active:scale-[0.98] shadow-md relative overflow-hidden transition-all">
+          <span class="absolute inset-0 animate-shimmer bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-50"></span>
+          <span class="relative">Join Waitlist</span>
+        </button>
+        <p id="error-msg" class="text-red-600 hidden">Error message</p>
+      </div>
+    </form>
+
+    <!-- Success Message -->
+    <div id="success-message" class="hidden flex flex-col items-center animate-slide-down mt-6">
+      <div class="w-24 h-24 flex items-center justify-center bg-green-200 rounded-full mb-4 animate-scale-in">
+        <span class="text-4xl animate-bounce">✅</span>
+      </div>
+      <h2 class="text-2xl font-semibold mb-2">Thanks for joining my waitlist!</h2>
+      <p class="text-lg mb-4">You'll hear from me soon.</p>
+      <div class="flex space-x-2">
+        <span class="w-3 h-3 bg-primary rounded-full animate-pulse"></span>
+        <span class="w-3 h-3 bg-primary rounded-full animate-pulse animation-delay-200"></span>
+        <span class="w-3 h-3 bg-primary rounded-full animate-pulse animation-delay-400"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

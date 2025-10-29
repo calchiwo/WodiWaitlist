@@ -1,0 +1,61 @@
+:root {
+  --background: #fafafa;
+  --foreground: #1a1a2e;
+  --primary: #2978ff;
+  --secondary: #ff92a1;
+  --card: #ffffff;
+  --border: #e5e5e5;
+  --input: #f3f3f3;
+  --ring: #2978ff;
+  --radius: 0.75rem;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slide-down {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Utility classes */
+.animate-float { animation: float 3s infinite ease-in-out; }
+.animate-fade-in { animation: fade-in 0.4s forwards; }
+.animate-scale-in { animation: scale-in 0.4s forwards; }
+.animate-slide-down { animation: slide-down 0.5s forwards; }
+.animate-shimmer { animation: shimmer 2s infinite; }
+.animate-bounce { animation: bounce 1s infinite; }
+.animate-pulse { animation: pulse 2s infinite; }
+
+.animation-delay-1s { animation-delay: 1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-400 { animation-delay: 0.4s; }
