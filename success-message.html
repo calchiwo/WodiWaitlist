@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Success Message</title>
+  <style>
+    :root {
+      --primary: #2978ff;
+      --secondary: #00d4ff;
+      --foreground: #000;
+      --card: #ffffff;
+      --muted-foreground: #666;
+    }
+
+    body {
+      background: #f8fafc;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .success-container {
+      position: relative;
+      animation: slideDown 0.6s ease-out forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .ping-dot {
+      position: absolute;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 9999px;
+      animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .ping-dot.primary { background: var(--primary); }
+    .ping-dot.secondary { background: var(--secondary); }
+
+    @keyframes ping {
+      0% { transform: scale(0.8); opacity: 1; }
+      80%, 100% { transform: scale(2); opacity: 0; }
+    }
+
+    .success-box {
+      position: relative;
+      background: linear-gradient(to bottom right, var(--card), rgba(41, 120, 255, 0.05));
+      border: 2px solid rgba(41, 120, 255, 0.3);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(41, 120, 255, 0.25);
+      overflow: hidden;
+    }
+
+    .success-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.1;
+      background: radial-gradient(circle at 50% 50%, rgba(41, 120, 255, 0.3), transparent 50%);
+    }
+
+    .emoji-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 5rem;
+      height: 5rem;
+      background: rgba(41, 120, 255, 0.1);
+      border-radius: 50%;
+      animation: scaleIn 0.6s ease-out;
+    }
+
+    @keyframes scaleIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .emoji {
+      font-size: 3rem;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--foreground), var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @media (min-width: 768px) {
+      .title { font-size: 2.25rem; }
+    }
+
+    .subtitle {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .pulse-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      background: var(--primary);
+      border-radius: 9999px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .footer-text {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+  </style>
+</head>
+<body>
+  <div class="success-container">
+    <div class="ping-dot primary" style="top:-1rem; left:25%;"></div>
+    <div class="ping-dot secondary" style="top:-0.5rem; right:33%; animation-delay:0.2s;"></div>
+    <div class="ping-dot primary" style="top:-1.5rem; right:25%; animation-delay:0.4s;"></div>
+
+    <div class="success-box">
+      <div class="emoji-container">
+        <span class="emoji">✅</span>
+      </div>
+
+      <div>
+        <h2 class="title">Thanks for joining my waitlist!</h2>
+        <p class="subtitle">I can't wait to share my projects with you.</p>
+      </div>
+
+      <div class="footer">
+        <div class="pulse-dot"></div>
+        <span class="footer-text">You'll hear from me soon</span>
+        <div class="pulse-dot" style="animation-delay:0.5s;"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
