@@ -9,8 +9,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "WodiWaitlist - Join My Journey",
   description:
-    'Join Caleb "Calchiwo" Wodi\'s waitlist to stay updated on upcoming projects and launches. Be part of something special from the very beginning.',
-  generator: "v0.app",
+    'Join my waitlist to stay updated on upcoming projects and launches. Be part of something special from the very beginning.',
 }
 
 export default function RootLayout({
