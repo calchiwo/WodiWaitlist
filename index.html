@@ -275,7 +275,16 @@
           Be among the first to know when I launch. Join the waitlist.
         </p>
 
-        <form name="wodiwaitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="waitlist-form" id="waitlist-form">
+        <!-- ✅ Netlify form with redirect -->
+        <form
+          name="wodiwaitlist"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="success-message.html"
+          class="waitlist-form"
+          id="waitlist-form"
+        >
           <input type="hidden" name="form-name" value="wodiwaitlist" />
           <p style="display:none">
             <label>Don't fill this out: <input name="bot-field" /></label>
@@ -283,8 +292,6 @@
           <input type="email" name="email" placeholder="Enter your email" required />
           <button type="submit">Subscribe</button>
         </form>
-        
-        <div id="form-message" class="form-message"></div>
       </div>
     </main>
 
@@ -310,36 +317,6 @@
             wordElement.style.opacity = 1;
           }, 300);
         }, 3000);
-      }
-
-      // Form submission
-      const form = document.getElementById("waitlist-form");
-      const message = document.getElementById("form-message");
-
-      if (form && message) {
-        form.addEventListener("submit", async function (e) {
-          e.preventDefault();
-
-          const data = new FormData(form);
-          
-          try {
-            const response = await fetch("/", {
-              method: "POST",
-              body: data,
-            });
-
-            if (response.ok) {
-              form.style.display = "none";
-              message.textContent = "🎉 Thanks for subscribing to my waitlist. You'll be the first to know when I launch any of my projects. Keep an eye on your inbox!";
-              message.style.color = "#1e40af";
-            } else {
-              throw new Error("Network response was not ok.");
-            }
-          } catch (error) {
-            message.textContent = "❌ Something went wrong. Please try again later.";
-            message.style.color = "#dc2626";
-          }
-        });
       }
     });
   </script>
