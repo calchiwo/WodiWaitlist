@@ -20,7 +20,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch("/api/submit", {
+      const response = await fetch(""https://wodi-waitlist.vercel.app/api/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
