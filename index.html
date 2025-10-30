@@ -328,7 +328,8 @@ Submit your email to stay updated on my upcoming projects and launches.
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Word rotation functionality
+
+      /* ✅ Rotating words animation */
       const words = ["extraordinary", "revolutionary", "game-changing", "mind-blowing"];
       let index = 0;
       const wordElement = document.getElementById("rotating-word");
@@ -343,7 +344,14 @@ Submit your email to stay updated on my upcoming projects and launches.
           }, 300);
         }, 3000);
       }
+
+      /* ✅ Loading spinner on submit */
+      const form = document.getElementById("waitlist-form");
+      const button = form.querySelector("button");
+
+      form.addEventListener("submit", function () {
+        button.classList.add("button-loading");
+      });
+
     });
   </script>
-</body>
-</html>
