@@ -1,1 +1,3 @@
-**My personal wait-list platform** for [**collecting early interest and sign-ups**](https://wodiwaitlist.netlify.app) for **my upcoming launches**.
+**My personal wait-list platform**
+
+join here 🫴 https://wodiwaitlist.netlify.app)
