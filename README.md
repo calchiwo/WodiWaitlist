@@ -1,3 +1,3 @@
 **My personal wait-list platform**
 
-join here 🫴 https://wodiwaitlist.netlify.app)
+join here 🫴 https://wodiwaitlist.netlify.app
